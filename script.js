@@ -3,10 +3,10 @@ $(document).ready(function() {
   // toggle color picker
   $('.palette').on('click', function() {
     $(this).hide();
-    $('.jscolor, .color span').show();
+    $('.jscolor').show();
   });
   $('.frame').on('mousedown', function() {
-    $('.jscolor, .color span').hide();
+    $('.jscolor').hide();
     $('.palette').show();
   });
 
@@ -43,18 +43,18 @@ $(document).ready(function() {
     }
 
     // instructions appear on grid
-    $('.instructions').css('display', 'block');
+    $('.instructions').show();
 
     // drawing on grid
     $('.frame div').on('mousedown', function() {
-      $('.instructions').css('display', 'none');
+      $('.instructions').hide();
       $(this).css('background', '#' + $('.jscolor').text());
     });
 
     var mouseDown = 0;
     $(document).mousedown(() => mouseDown = 1).mouseup(() => mouseDown = 0);
 
-    $('.frame div').mousemove(function() {
+    $('.frame div').on('mousemove', function() {
       if (mouseDown === 1)
         $(this).css('background', '#' + $('.jscolor').text());
     });
