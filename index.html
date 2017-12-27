@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sketchpad</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <div id="header">
+    <div id="size">
+      Choose a grid size (between 1 and 100 squares):
+      <input id="num" type="text" value="16" onclick="this.select()" />
+    </div>
+    <input id="create" type="button" value="Create a new sketch" />
+  </div>
+
+  <div id="frame"></div>
+  <p id="instructions">Click and drag to begin sketching</p>
+
+  <!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
+  <script src="jquery.js"></script>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>
