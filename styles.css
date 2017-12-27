@@ -13,59 +13,110 @@ body {
 	font-family: sans-serif;
   color: #fff;
 	background: #444;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
 	justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
 }
 
-#header {
+.header {
 	display: inline;
 }
 
-#size {
+.size {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-#num {
+.num {
 	width: 36px;
 	height: 28px;
 	padding: 10px;
 	background-color: #222;
 	color: #bf9720;
 	border: 0 none;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	text-align: center;
 }
 
-#num:hover {
+.num:hover {
 	cursor: pointer;
 }
 
-#create {
+.create {
 	display: block;
 	margin: 0 auto;
 	border: 0 none;
 	padding: 10px;
 	border-radius: 0;
+	font-size: 1em;
 	background-color: #bf9720;
 	color: inherit;
 }
 
-#frame {
+.frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin-top: 2.5vh;
+	margin-top: 4vh;
 }
 
-#instructions {
+.instructions {
 	display: none;
 	z-index: 99;
 	position: absolute;
-	margin: 0 auto;
 	top: 50%;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50);
 	text-align: center;
-	transform: translate(0, 50%);
-	/*-moz-transform: translate(-50%, 50%);*/
+}
+
+.color {
+	position: absolute;
+	bottom: .5vh;
+	width: 64px;
+	height: 64px;
+}
+
+.color span {
+	display: none;
+}
+
+.colorContent {
+	position: relative;
+}
+
+.colorContent > * {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.jscolor {
+	display: none;
+	border: 0;
+}
+
+@media screen and (max-height: 900px) {
+	.color {
+		position: absolute;
+		top: 3vh;
+		right: 5vw;
+	}
 }

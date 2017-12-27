@@ -11,17 +11,31 @@
 
 <body>
 
-  <div id="header">
-    <div id="size">
-      Choose a grid size (between 1 and 100 squares):
-      <input id="num" type="text" value="16" onclick="this.select()" />
+  <div class="header">
+    <div class="size">
+      Choose a grid size (from 1 to 200 squares):
+      <input class="num" type="text" value="40" onclick="this.select()" />
     </div>
-    <input id="create" type="button" value="Create a new sketch" />
+    <input class="create" type="button" value="Create a new sketch" />
   </div>
 
-  <div id="frame"></div>
-  <p id="instructions">Click and drag to begin sketching</p>
+  <div class="frame"></div>
+  <div class="instructions">
+    Click and drag to begin sketching
+  </div>
 
+  <div class="color">
+    <div class="colorContent">
+      <button class="jscolor" title="Click to change color"></button>
+      <img src="palette.png" class="palette" alt="colors" title="Double-click to change color">
+    </div>
+    <!-- <div class="changeColor">Change color:<input class="jscolor" value="ffffff"></div> -->
+  </div>
+
+
+
+
+  <script src="jscolor/jscolor.js"></script>
   <!-- <script src="http://code.jquery.com/jquery.min.js"></script> -->
   <script src="jquery.js"></script>
   <script src="script.js" type="text/javascript"></script>
