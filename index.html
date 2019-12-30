@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sketchpad</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="styles.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="size">
+      Choose a grid size (from 1 to 200 squares):
+      <input class="num" type="text" value="40" onclick="this.select()" />
+    </div>
+    <input class="create" type="button" value="Create a new sketch" />
+  </div>
+
+  <div class="frame"></div>
+  <div class="instructions">
+    Click and drag to begin sketching
+  </div>
+
+  <div class="color">
+    <div class="colorContent">
+      <button class="jscolor" title="Click to change color"></button>
+      <img src="palette.png" class="palette" alt="colors" title="Double-click to change color">
+    </div>
+  </div>
+
+
+
+
+  <script src="jscolor/jscolor.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="jquery.js"></script> -->
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
